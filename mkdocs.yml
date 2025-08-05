@@ -1,8 +1,6 @@
 site_name: Vernesity V2 Documentation
 theme:
   name: material
-  logo: icon.png
-  favicon: icon.png
   features:
     - navigation.tracking
     - toc.integrate
@@ -41,4 +39,5 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
 
