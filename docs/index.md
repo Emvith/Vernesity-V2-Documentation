@@ -352,7 +352,7 @@ end
 
 
 
-### Other Useless Functions: <Window/CommandBar>:OnClose(<Function>), <Window/CommandBar>:OnMinimize(<Function>), <Window>:OnThemeChanged(<Function>), <Element>:GetElement() and <Element>:ConvertToCommand(<CommandBar>)
+### More Useless Functions: <Window/CommandBar>:OnClose(<Function>), <Window/CommandBar>:OnMinimize(<Function>), <Window>:OnThemeChanged(<Function>), <Element>:GetElement() and <Element>:ConvertToCommand(<CommandBar>)
 ```Lua
 Window:OnClose(function()
 	print('Window closed')
@@ -367,7 +367,7 @@ CommandBar:OnMinimize(function(state)
 	print('CommandBar minimized:', state)
 end)
 Window:OnThemeChanged(function()
-	print("The theme was changed.")
+	print("The theme was changed")
 end)
 print(Window:GetElement().Name)
 ```
@@ -380,7 +380,7 @@ Button:ConvertToCommand(CommandBar)
 	
 	
 	
-## EXAMPLE CODE:
+## Example Code:
 ```Lua
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emvith/Vernesity-V2/main/source.lua"))()
 Library:EnableKeySystem('Title', 'Key System', 'Note here', {'1234'})
@@ -449,17 +449,17 @@ Window:OnMinimize(function(state)
 	print('Minimized:', state)
 end)
 Window:OnThemeChanged(function()
-	print("The theme was changed.")
+	print("The theme was changed")
 end)
 local PlayerList = Section:PlayerList('PlayerList', function(plr)
 	print("Selected player:", plr)
 end)
 
-local CommandBarUI = Window:CommandBar('Name here', ';')
-CommandBarUI:AddCommand({'print'}, {'string'}, 'Prints a string.', function(str)
+local CommandBarUI = Window:CommandBar('Name here', '-')
+CommandBarUI:AddCommand({'print'}, {'string'}, 'Prints a string', function(str)
 	print(str)
 end)
-CommandBarUI:AddCommand({'addnumbers'}, {'numbers'}, 'Adds numbers together.', function(numbers)
+CommandBarUI:AddCommand({'addnumbers'}, {'numbers'}, 'Adds numbers together', function(numbers)
 	local totalSum = 0
 	for number in numbers:gmatch("%d+") do
 		totalSum = totalSum + tonumber(number)
@@ -467,6 +467,7 @@ CommandBarUI:AddCommand({'addnumbers'}, {'numbers'}, 'Adds numbers together.', f
 	print(totalSum)
 end)
 ```
+
 
 
 
