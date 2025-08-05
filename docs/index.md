@@ -7,7 +7,7 @@
  - Resizable windows
  - Minimizable
  - Many elements
- - Key system (don't expect it to be super secure though)
+ - Key system
  - Search function
  - All elements are editable (except for Notifications)
  - Ability to change themes
@@ -477,4 +477,5 @@ CommandBarUI:AddCommand({'addnumbers'}, {'numbers'}, 'Adds numbers together.', f
 	print(totalSum)
 end)
 ```
+
 
