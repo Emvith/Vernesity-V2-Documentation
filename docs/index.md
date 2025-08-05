@@ -1,7 +1,11 @@
 # Vernesity V2 UI Library
 ## Made by Emmy (Discord: emvith)
 
-## Latest update: Added <Element>:ConvertToCommand() and fixed a lot of bugs
+## Last update (5th August 2025):
+ - Made CommandBars resizable
+ - Fixed a small bug with minimizing
+ - Added "Reset" buttons to ColorPickers
+ - Made small changes to some functions
 
 ## Features:
  - Resizable windows
@@ -348,7 +352,7 @@ end
 
 
 
-### Other Useless Functions: <Window>:OnClose(<Function>), <Window>:OnMinimize(<Function>), <Window>:OnThemeChanged(<Function>), <Element>:GetElement() and <Element>:ConvertToCommand(<CommandBar>)
+### Other Useless Functions: <Window/CommandBar>:OnClose(<Function>), <Window/CommandBar>:OnMinimize(<Function>), <Window>:OnThemeChanged(<Function>), <Element>:GetElement() and <Element>:ConvertToCommand(<CommandBar>)
 ```Lua
 Window:OnClose(function()
 	print('Window closed')
@@ -371,7 +375,7 @@ print(Window:GetElement().Name)
 ```Lua
 Button:ConvertToCommand(CommandBar)
 ```
-(Not available for Labels or Paragraphs)
+(Not available for Labels or Paragraphs for obvious reasons)
 
 	
 	
@@ -429,19 +433,12 @@ end)
 
 local SettingsSection = Tab2:Section('Settings')
 
-local theme = Window:GetTheme()
+theme = Window:GetTheme()
 for i, v in pairs(theme) do
-	local ThemeColorPicker = SettingsSection:ColorPicker(i, "Changes "..i.."'s Theme", v, function(color3)
+	ThemeColorPicker = SettingsSection:ColorPicker(i, "Changes "..i.."'s Theme", v, function(color3)
 		theme = Window:GetTheme()
 		theme[i] = color3
 		Window:ChangeTheme(theme)
-	end)
-	Window:OnThemeChanged(function()
-		theme = Window:GetTheme()
-		ThemeColorPicker:Edit(i, "Changes "..i.."'s Theme", theme[i], function(color3)
-			theme[i] = color3
-			Window:ChangeTheme(theme)
-		end)
 	end)
 end
 
@@ -470,6 +467,7 @@ CommandBarUI:AddCommand({'addnumbers'}, {'numbers'}, 'Adds numbers together.', f
 	print(totalSum)
 end)
 ```
+
 
 
 
