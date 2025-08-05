@@ -336,19 +336,12 @@ Window:Remove()
 
 ### And here's the code which will help you add a fully customizable UI
 ```Lua
-local theme = Window:GetTheme()
+theme = Window:GetTheme()
 for i, v in pairs(theme) do
-	local ThemeColorPicker = SettingsSection:ColorPicker(i, "Changes "..i.."'s Theme", v, function(color3)
+	ThemeColorPicker = SettingsSection:ColorPicker(i, "Changes "..i.."'s Theme", v, function(color3)
 		theme = Window:GetTheme()
 		theme[i] = color3
 		Window:ChangeTheme(theme)
-	end)
-	Window:OnThemeChanged(function()
-		theme = Window:GetTheme()
-		ThemeColorPicker:Edit(i, "Changes "..i.."'s Theme", theme[i], function(color3)
-			theme[i] = color3
-			Window:ChangeTheme(theme)
-		end)
 	end)
 end
 ```
@@ -477,6 +470,7 @@ CommandBarUI:AddCommand({'addnumbers'}, {'numbers'}, 'Adds numbers together.', f
 	print(totalSum)
 end)
 ```
+
 
 
 
