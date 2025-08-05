@@ -31,7 +31,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github 
-      link: https://github.com/Emcept
+      link: https://github.com/Emvith
       
 markdown_extensions:
   - pymdownx.highlight:
@@ -41,3 +41,4 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
