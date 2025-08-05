@@ -17,7 +17,7 @@
 
 ## Getting Loadstring
 ```Lua
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Vernesity-V2/main/source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emvith/Vernesity-V2/main/source.lua"))()
 ```
 
 ## Adding Key System
@@ -385,7 +385,7 @@ Button:ConvertToCommand(CommandBar)
 	
 ## EXAMPLE CODE:
 ```Lua
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Vernesity-V2/main/source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emvith/Vernesity-V2/main/source.lua"))()
 Library:EnableKeySystem('Title', 'Key System', 'Note here', {'1234'})
 local Window = Library:Window('Vernesity', 'Game Name', 'DarkTheme')
 local Tab = Window:Tab('Tab 1')
@@ -477,5 +477,6 @@ CommandBarUI:AddCommand({'addnumbers'}, {'numbers'}, 'Adds numbers together.', f
 	print(totalSum)
 end)
 ```
+
 
 
