@@ -1,5 +1,5 @@
 # Vernesity V2 UI Library
-## Made by Emmy (Discord: emcept)
+## Made by Emmy (Discord: emvith)
 
 ## Latest update: Added <Element>:ConvertToCommand() and fixed a lot of bugs
 
@@ -477,3 +477,4 @@ CommandBarUI:AddCommand({'addnumbers'}, {'numbers'}, 'Adds numbers together.', f
 	print(totalSum)
 end)
 ```
+
