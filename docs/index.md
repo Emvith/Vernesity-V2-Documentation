@@ -370,7 +370,7 @@ CommandBar:OnMinimize(function(state)
 	print('CommandBar minimized:', state)
 end)
 Window:OnThemeChanged(function()
-	print("The theme had been changed.")
+	print("The theme was changed.")
 end)
 print(Window:GetElement().Name)
 ```
@@ -459,7 +459,7 @@ Window:OnMinimize(function(state)
 	print('Minimized:', state)
 end)
 Window:OnThemeChanged(function()
-	print("The theme had been changed.")
+	print("The theme was changed.")
 end)
 local PlayerList = Section:PlayerList('PlayerList', function(plr)
 	print("Selected player:", plr)
@@ -477,6 +477,7 @@ CommandBarUI:AddCommand({'addnumbers'}, {'numbers'}, 'Adds numbers together.', f
 	print(totalSum)
 end)
 ```
+
 
 
 
